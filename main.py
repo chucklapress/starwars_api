@@ -1,5 +1,7 @@
 import requests
 
+print('WELCOME TO THE STARWARS API USER BASE')
+
 choice = int(input('Type (1) for a list of StarWars Universe characters, or: type (2)for a list of starshipsClasses from the movies'))
 if choice == 1:
     url = "http://swapi.co/api/people/"
@@ -25,8 +27,8 @@ if choice == 1:
     while response['next']:
         for species in response['results']:
             print(species['name'])
-            url = response["next"]
-            response = requests.get(url).json()
+        url = response["next"]
+        response = requests.get(url).json()
 elif choice == 2:
     url = "http://swapi.co/api/vehicles/"
     response = requests.get(url).json()
