@@ -38,7 +38,7 @@ elif choice == 2:
         url = response["next"]
         response = requests.get(url).json()
 
-choice = int(input('Type(1)for a list of titles of the StarWars movies as they appeared in chronological order or type (2) to exit'))
+choice = int(input('Type(1)for a list of titles of the StarWars movies  or type (2) to exit'))
 if choice == 1:
     url = "http://swapi.co/api/films"
     response = requests.get(url).json()
