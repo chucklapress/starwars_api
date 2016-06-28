@@ -46,3 +46,18 @@ if choice == 1:
         print(film['title'])
 elif choice ==2:
     exit()
+
+print('LISTING DETAILS DARTH VADER')
+url = "http://swapi.co/api/people/4"
+response = requests.get(url).json()
+print(response)
+
+print('LISTING DETAILS FOR AT-AT')
+url = "http://swapi.co/api/vehicles/18"
+response = requests.get(url).json()
+print(response)
+
+print('LISTING DETAIL FOR RETURN OF THE JEDI')
+url = "http://swapi.co/api/films/3"
+response = requests.get(url).json()
+print(response)
