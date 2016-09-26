@@ -52,6 +52,7 @@ url = "http://swapi.co/api/people/4"
 response = requests.get(url).json()
 print(response)
 
+
 print('LISTING DETAILS FOR AT-AT')
 url = "http://swapi.co/api/vehicles/18"
 response = requests.get(url).json()
