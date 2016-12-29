@@ -4,6 +4,7 @@ print('WELCOME TO THE STARWARS API USER BASE')
 
 choice = int(input('Type (1) for a list of StarWars Universe characters, or: type (2)for a list of starshipsClasses from the movies'))
 if choice == 1:
+    print('STARWARS CHARACTERS')
     url = "http://swapi.co/api/people/"
     response = requests.get(url).json()
     while response['next']:
@@ -12,6 +13,7 @@ if choice == 1:
         url = response["next"]
         response = requests.get(url).json()
 elif choice == 2:
+    print('STARWARS SPACESHIPS')
     url = "http://swapi.co/api/starships/"
     response = requests.get(url).json()
     while response['next']:
@@ -22,6 +24,7 @@ elif choice == 2:
 
 choice = int(input('Type (1) for a list of species droid, humanoid other, or; type (2) to list the vehicles from the movies' ))
 if choice == 1:
+    print('STARWARS SPECIES')
     url = "http://swapi.co/api/species/"
     response = requests.get(url).json()
     while response['next']:
@@ -30,6 +33,7 @@ if choice == 1:
         url = response["next"]
         response = requests.get(url).json()
 elif choice == 2:
+    print('STARWARS VEHICLES')
     url = "http://swapi.co/api/vehicles/"
     response = requests.get(url).json()
     while response['next']:
@@ -40,25 +44,31 @@ elif choice == 2:
 
 choice = int(input('Type(1)for a list of titles of the StarWars movies  or type (2) to exit'))
 if choice == 1:
+    print('STARWARS MOVIES')
     url = "http://swapi.co/api/films"
     response = requests.get(url).json()
     for film in response['results']:
         print(film['title'])
 elif choice ==2:
     exit()
+choice = int(input('Type(1)for details about Darth Vader  or type (2) for details about AT-AT vehicle  or type (3) for details about the movie Return of the Jedi enter (4)to exit'))
+if choice == 1:
+    print('LISTING DETAILS DARTH VADER')
+    url = "http://swapi.co/api/people/4"
+    response = requests.get(url).json()
+    print(response)
 
-print('LISTING DETAILS DARTH VADER')
-url = "http://swapi.co/api/people/4"
-response = requests.get(url).json()
-print(response)
+if choice == 2:
+    print('LISTING DETAILS FOR AT-AT')
+    url = "http://swapi.co/api/vehicles/18"
+    response = requests.get(url).json()
+    print(response)
 
+if choice == 3:
+    print('LISTING DETAIL FOR RETURN OF THE JEDI')
+    url = "http://swapi.co/api/films/3"
+    response = requests.get(url).json()
+    print(response)
 
-print('LISTING DETAILS FOR AT-AT')
-url = "http://swapi.co/api/vehicles/18"
-response = requests.get(url).json()
-print(response)
-
-print('LISTING DETAIL FOR RETURN OF THE JEDI')
-url = "http://swapi.co/api/films/3"
-response = requests.get(url).json()
-print(response)
+elif choice ==4:
+    exit()
