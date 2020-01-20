@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import requests
 
 print('WELCOME TO THE STARWARS API USER BASE')
