@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import requests
 
-print('WELCOME TO THE STARWARS API USER BASE')
+print('WELCOME TO THE NEW STARWARS API USER BASE')
 
 choice = int(input('Type (1) for a list of StarWars Universe characters, or: type (2)for a list of starshipsClasses from the movies'))
 if choice == 1:
