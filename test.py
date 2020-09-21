@@ -15,7 +15,7 @@ class Testing(unittest.TestCase):
     def test_new_string(self):
         a - 'cat'
         b = 'dog'
-        self.assertNotEqual(a != b)
+        self.assertNotEqual(a, b)
 
 if __name__ == '__main__':
     unittest.main()
