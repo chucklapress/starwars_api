@@ -13,7 +13,7 @@ class Testing(unittest.TestCase):
         self.assertEqual(a, b)
 
     def test_new_string(self):
-        a - 'cat'
+        a = 'cat'
         b = 'dog'
         self.assertNotEqual(a, b)
 
