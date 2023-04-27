@@ -3,7 +3,7 @@ import requests
 
 print('WELCOME TO THE NEWEST STARWARS API USER BASE')
 
-choice = int(input('Type (1) for a list of StarWars Universe characters, or: type (2)for a list of starshipsClasses from the movies'))
+choice = int(input('Type (1) for a list of StarWars Universe characters, or: type (2)for a list of starshipsClasses from the movies '))
 if choice == 1:
     print('STARWARS CHARACTERS')
     url = "http://swapi.dev/api/people/"
@@ -23,7 +23,7 @@ elif choice == 2:
         url = response["next"]
         response = requests.get(url).json()
 
-choice = int(input('Type (1) for a list of species droid, humanoid other, or; type (2) to list the vehicles from the movies' ))
+choice = int(input('Type (1) for a list of species droid, humanoid other, or; type (2) to list the vehicles from the movies ' ))
 if choice == 1:
     print('STARWARS SPECIES')
     url = "http://swapi.dev/api/species/"
@@ -43,7 +43,7 @@ elif choice == 2:
         url = response["next"]
         response = requests.get(url).json()
 
-choice = int(input('Type(1)for a list of titles of the StarWars movies  or type (2) to exit'))
+choice = int(input('Type(1)for a list of titles of the StarWars movies  or type (2) to exit '))
 if choice == 1:
     print('STARWARS MOVIES')
     url = "http://swapi.dev/api/films"
@@ -52,7 +52,7 @@ if choice == 1:
         print(film['title'])
 elif choice ==2:
     exit()
-choice = int(input('Type(1)for details about Darth Vader  or type (2) for details about AT-AT vehicle  or type (3) for details about the movie Return of the Jedi enter (4)to exit'))
+choice = int(input('Type(1)for details about Darth Vader  or type (2) for details about AT-AT vehicle  or type (3) for details about the movie Return of the Jedi enter (4)to exit '))
 if choice == 1:
     print('LISTING DETAILS DARTH VADER')
     url = "http://swapi.dev/api/people/4"
